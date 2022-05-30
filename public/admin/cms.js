@@ -16948,6 +16948,13 @@ var _s = __webpack_require__.$Refresh$.signature();
 
 
 function getWindowDimensions() {
+  if (!window) {
+    return {
+      windowWidth: 1024,
+      windowHeight: 1000
+    };
+  }
+
   var _window = window,
       windowWidth = _window.innerWidth,
       windowHeight = _window.innerHeight;
@@ -49287,7 +49294,7 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
     if(true) {
-      // 1653907384355
+      // 1653908112458
       var cssReload = __webpack_require__(/*! ./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -75897,7 +75904,7 @@ module.exports = [];
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	!function() {
-/******/ 		__webpack_require__.h = function() { return "68e52de58296c5dce7c1"; }
+/******/ 		__webpack_require__.h = function() { return "765d975f920b04fd5f22"; }
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

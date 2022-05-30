@@ -4033,6 +4033,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function getWindowDimensions() {
+  if (!window) {
+    return {
+      windowWidth: 1024,
+      windowHeight: 1000
+    };
+  }
+
   const {
     innerWidth: windowWidth,
     innerHeight: windowHeight
