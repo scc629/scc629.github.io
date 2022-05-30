@@ -16,7 +16,7 @@ export const BlogPostTemplate = ({
   // heading,
   // description,
   // intro,
-  main,
+  // main,
   // testimonials,
   // fullImage,
   // pricing,
@@ -46,7 +46,7 @@ export const BlogPostTemplate = ({
                     {/* <h3 className="has-text-weight-semibold is-size-3">
                       {main.heading}
                     </h3> */}
-                    <p style={{ fontSize: "1.5em"}}>{main.description}</p>
+                    {/* <p style={{ fontSize: "1.5em"}}>{main.description}</p> */}
                   </div>
                 </div>
                 <div className="tile is-ancestor">
@@ -54,12 +54,12 @@ export const BlogPostTemplate = ({
                     <div className="tile">
                       <div className="tile is-parent is-vertical">
                         <article className="tile is-child">
-                          <PreviewCompatibleImage imageInfo={main.image1} />
+                          {/* <PreviewCompatibleImage imageInfo={main.image1} /> */}
                         </article>
                       </div>
                       <div className="tile is-parent">
                         <article className="tile is-child">
-                          <PreviewCompatibleImage imageInfo={main.image2} />
+                          {/* <PreviewCompatibleImage imageInfo={main.image2} /> */}
                         </article>
                       </div>
                     </div>

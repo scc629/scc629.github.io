@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-post-js",
+    "path": "/blog/2016-12-17-making-sense-of-the-scaas-new-flavor-wheel/",
+    "result": {"data":{"markdownRemark":{"frontmatter":{"title":"Making sense of the SCAA’s new Flavor Wheel","image":null,"heading":null,"description":"The Coffee Taster’s Flavor Wheel, the official resource used by coffee tasters, has been revised for the first time this year.","intro":null,"main":null,"testimonials":null,"full_image":null,"pricing":null}}},"pageContext":{"id":"43097d55-4b88-5072-995a-168538138a6c"}},
+    "staticQueryHashes": ["4080856488"]}
