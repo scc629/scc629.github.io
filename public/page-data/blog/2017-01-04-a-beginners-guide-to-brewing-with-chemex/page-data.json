@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-blog-post-js",
-    "path": "/blog/2017-01-04-a-beginners-guide-to-brewing-with-chemex/",
-    "result": {"data":{"markdownRemark":{"frontmatter":{"title":"A beginners’ guide to brewing with Chemex","image":null,"heading":null,"description":"Brewing with a Chemex probably seems like a complicated, time-consuming ordeal, but once you get used to the process, it becomes a soothing ritual that's worth the effort every time.","intro":null,"main":null,"testimonials":null,"full_image":null,"pricing":null}}},"pageContext":{"id":"d0424e3c-0e7e-5728-9468-1a4b6724e27b"}},
-    "staticQueryHashes": ["4080856488"]}
