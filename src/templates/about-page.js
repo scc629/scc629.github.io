@@ -1,28 +1,35 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
+import { getImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
-import Content, { HTMLContent } from "../components/Content";
+import { HTMLContent } from "../components/Content";
+import FullWidthImage from "../components/FullWidthImage";
 
 // eslint-disable-next-line
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content;
-
+export const AboutPageTemplate = ({ title, subtitle, link, image }) => {
+  const heroImage = getImage(image) || image;
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <PageContent className="content" content={content} />
+    <div style={{ background: '#090a0c' }}>
+      <FullWidthImage img={heroImage} title={title} subheading={subtitle} center="true">
+        <a href={link} target="_blank" rel="noreferrer"><p className="paragraph link has-text-centered">{link}</p></a>
+      </FullWidthImage>
+      {/* <section className="section section--gradient">
+        <div className="container">
+          <div className="columns">
+            <div className="column is-10 is-offset-1">
+              <div className="section">
+                <h2 className="title is-size-3 has-text-weight-bold is-bold-light has-text-centered">
+                  {title}
+                </h2>
+                <a href={link} target="_blank" rel="noreferrer"><p className="paragraph link has-text-centered">{link}</p></a>
+                <PageContent className="content" content={content} />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section> */}
+    </div>
   );
 };
 
@@ -34,13 +41,17 @@ AboutPageTemplate.propTypes = {
 
 const AboutPage = ({ data }) => {
   const { markdownRemark: post } = data;
+  const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
       <AboutPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
+        subtitle={post.frontmatter.subtitle}
+        link={post.frontmatter.link}
         content={post.html}
+        image={frontmatter.image}
       />
     </Layout>
   );
@@ -58,6 +69,13 @@ export const aboutPageQuery = graphql`
       html
       frontmatter {
         title
+        subtitle
+        link
+        image {
+          childImageSharp {
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+          }
+        }
       }
     }
   }

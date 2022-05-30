@@ -1,80 +1,140 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { kebabCase } from "lodash";
-import { Helmet } from "react-helmet";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
+import { getImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
-import Content, { HTMLContent } from "../components/Content";
+// import Features from "../components/Features";
+// import Testimonials from "../components/Testimonials";
+// import Pricing from "../components/Pricing";
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import FullWidthImage from "../components/FullWidthImage";
 
 // eslint-disable-next-line
 export const BlogPostTemplate = ({
-  content,
-  contentComponent,
-  description,
-  tags,
+  image,
   title,
-  helmet,
+  // heading,
+  // description,
+  // intro,
+  main,
+  // testimonials,
+  // fullImage,
+  // pricing,
 }) => {
-  const PostContent = contentComponent || Content;
+  const heroImage = getImage(image) || image;
+  // const fullWidthImage = getImage(fullImage) || fullImage;
 
   return (
-    <section className="section">
-      {helmet || ""}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map((tag) => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
+    <div className="content">
+      <FullWidthImage img={heroImage} title={title} />
+      <section className="section section--gradient">
+        <div className="container">
+          <div className="section">
+            {/* <div className="columns">
+              <div className="column is-7 is-offset-1">
+                <h3 className="has-text-weight-semibold is-size-2">
+                  {heading}
+                </h3>
+                <p>{description}</p>
               </div>
-            ) : null}
+            </div> */}
+            <div className="columns">
+              <div className="column is-10 is-offset-1">
+                {/* <Features gridItems={intro.blurbs} />  */}
+                <div className="columns">
+                  <div className="column is-12">
+                    {/* <h3 className="has-text-weight-semibold is-size-3">
+                      {main.heading}
+                    </h3> */}
+                    <p style={{ fontSize: "1.5em"}}>{main.description}</p>
+                  </div>
+                </div>
+                <div className="tile is-ancestor">
+                  <div className="tile is-vertical">
+                    <div className="tile">
+                      <div className="tile is-parent is-vertical">
+                        <article className="tile is-child">
+                          <PreviewCompatibleImage imageInfo={main.image1} />
+                        </article>
+                      </div>
+                      <div className="tile is-parent">
+                        <article className="tile is-child">
+                          <PreviewCompatibleImage imageInfo={main.image2} />
+                        </article>
+                      </div>
+                    </div>
+                    {/* <div className="tile is-parent">
+                      <article className="tile is-child">
+                        <PreviewCompatibleImage imageInfo={main.image3} />
+                      </article>
+                    </div> */}
+                  </div>
+                </div>
+                {/* <Testimonials testimonials={testimonials} /> */}
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      {/* <FullWidthImage img={fullWidthImage} imgPosition={"bottom"} />
+      <section className="section section--gradient">
+        <div className="container">
+          <div className="section">
+            <div className="columns">
+              <div className="column is-10 is-offset-1">
+                <h2 className="has-text-weight-semibold is-size-2">
+                  {pricing.heading}
+                </h2>
+                <p className="is-size-5">{pricing.description}</p>
+                <Pricing data={pricing.plans} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> */}
+    </div>
   );
 };
 
 BlogPostTemplate.propTypes = {
-  content: PropTypes.node.isRequired,
-  contentComponent: PropTypes.func,
-  description: PropTypes.string,
+  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  helmet: PropTypes.object,
+  heading: PropTypes.string,
+  description: PropTypes.string,
+  intro: PropTypes.shape({
+    blurbs: PropTypes.array,
+  }),
+  main: PropTypes.shape({
+    heading: PropTypes.string,
+    description: PropTypes.string,
+    image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    image2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    image3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  }),
+  testimonials: PropTypes.array,
+  fullImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  pricing: PropTypes.shape({
+    heading: PropTypes.string,
+    description: PropTypes.string,
+    plans: PropTypes.array,
+  }),
 };
 
 const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
       <BlogPostTemplate
-        content={post.html}
-        contentComponent={HTMLContent}
-        description={post.frontmatter.description}
-        helmet={
-          <Helmet titleTemplate="%s | Blog">
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
-            />
-          </Helmet>
-        }
-        tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
+        image={frontmatter.image}
+        title={frontmatter.title}
+        heading={frontmatter.heading}
+        description={frontmatter.description}
+        intro={frontmatter.intro}
+        main={frontmatter.main}
+        testimonials={frontmatter.testimonials}
+        fullImage={frontmatter.full_image}
+        pricing={frontmatter.pricing}
       />
     </Layout>
   );
@@ -82,22 +142,78 @@ const BlogPost = ({ data }) => {
 
 BlogPost.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object,
+    }),
   }),
 };
 
 export default BlogPost;
 
-export const pageQuery = graphql`
-  query BlogPostByID($id: String!) {
+export const blogPostQuery = graphql`
+  query BlogPost($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      id
-      html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
         title
+        image {
+          childImageSharp {
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+          }
+        }
+        heading
         description
-        tags
+        intro {
+          blurbs {
+            image {
+              childImageSharp {
+                gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
+              }
+            }
+            text
+          }
+          heading
+          description
+        }
+        main {
+          heading
+          description
+          image1 {
+            alt
+            image {
+              childImageSharp {
+                gatsbyImageData(width: 526, quality: 92, layout: CONSTRAINED)
+              }
+            }
+          }
+          image2 {
+            alt
+            image {
+              childImageSharp {
+                gatsbyImageData(width: 526, quality: 92, layout: CONSTRAINED)
+              }
+            }
+          }
+        }
+        testimonials {
+          author
+          quote
+        }
+
+        full_image {
+          childImageSharp {
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+          }
+        }
+        pricing {
+          heading
+          description
+          plans {
+            description
+            items
+            plan
+            price
+          }
+        }
       }
     }
   }

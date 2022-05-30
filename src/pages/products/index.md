@@ -1,7 +1,7 @@
 ---
 templateKey: 'product-page'
 path: /products
-title: Our Coffee
+title: Shirts
 image: /img/jumbotron.jpg
 heading: Great coffee with a conscience
 description: >-
@@ -47,10 +47,7 @@ intro:
 main:
   heading: Great coffee with no compromises
   description: >
-    We hold our coffee to the highest standards from the shrub to the cup.
-    That’s why we’re meticulous and transparent about each step of the coffee’s
-    journey. We personally visit each farm to make sure the conditions are
-    optimal for the plants, farmers and the local environment.
+    Astronaut Apparel have everything a space traveler could ever want in a wide range of colors. Customize your shirts to your exact needs.
   image1:
     alt: A close-up of a paper filter filled with ground coffee
     image: /img/products-grid3.jpg

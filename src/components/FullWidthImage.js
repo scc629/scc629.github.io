@@ -4,11 +4,13 @@ import { GatsbyImage } from "gatsby-plugin-image";
 
 export default function FullWidthImage(props) {
   const {
-    height = 800,
+    height = '100vh',
     img,
     title,
     subheading,
     imgPosition = "top left",
+    center = "false",
+    children,
   } = props;
 
   return (
@@ -18,6 +20,9 @@ export default function FullWidthImage(props) {
         style={{
           display: "grid",
           alignItems: "center",
+          position: "relative",
+          top: "-3.25rem",
+          textAlign: center ? "center" : ""
         }}
       >
         {img?.url ? (
@@ -100,6 +105,7 @@ export default function FullWidthImage(props) {
                 {subheading}
               </h3>
             )}
+            {children && <div>{children}</div>}
           </div>
         )}
       </div>
