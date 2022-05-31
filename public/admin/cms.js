@@ -17406,11 +17406,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gatsby-plugin-image */ "./node_modules/gatsby-plugin-image/dist/index.browser-44f85d35.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! gatsby-plugin-image */ "./node_modules/gatsby-plugin-image/dist/index.browser-44f85d35.js");
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Layout */ "./src/components/Layout.js");
-/* harmony import */ var _components_FullWidthImage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/FullWidthImage */ "./src/components/FullWidthImage.js");
+/* harmony import */ var _components_PreviewCompatibleImage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/PreviewCompatibleImage */ "./src/components/PreviewCompatibleImage.js");
+/* harmony import */ var _components_FullWidthImage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/FullWidthImage */ "./src/components/FullWidthImage.js");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 /* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/gatsby/dist/utils/fast-refresh-module.js */ "./node_modules/gatsby/dist/utils/fast-refresh-module.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
@@ -17425,30 +17426,31 @@ var _jsxFileName = "/Users/jennifermacdonald/Workspace/scc629.github.io/src/temp
  // import Features from "../components/Features";
 // import Testimonials from "../components/Testimonials";
 // import Pricing from "../components/Pricing";
-// import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+
 
  // eslint-disable-next-line
 
 var PantsPageTemplate = function PantsPageTemplate(_ref) {
   var image = _ref.image,
-      title = _ref.title;
-  var heroImage = (0,gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_3__.d)(image) || image; // const fullWidthImage = getImage(fullImage) || fullImage;
+      title = _ref.title,
+      main = _ref.main;
+  var heroImage = (0,gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_4__.d)(image) || image; // const fullWidthImage = getImage(fullImage) || fullImage;
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "content",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28,
+      lineNumber: 27,
       columnNumber: 5
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_FullWidthImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_FullWidthImage__WEBPACK_IMPORTED_MODULE_3__["default"], {
     img: heroImage,
     title: title,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29,
+      lineNumber: 28,
       columnNumber: 7
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
@@ -17456,7 +17458,7 @@ var PantsPageTemplate = function PantsPageTemplate(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30,
+      lineNumber: 29,
       columnNumber: 7
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -17464,7 +17466,7 @@ var PantsPageTemplate = function PantsPageTemplate(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
+      lineNumber: 30,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -17472,7 +17474,7 @@ var PantsPageTemplate = function PantsPageTemplate(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
+      lineNumber: 31,
       columnNumber: 11
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -17480,7 +17482,7 @@ var PantsPageTemplate = function PantsPageTemplate(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41,
+      lineNumber: 40,
       columnNumber: 13
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -17488,7 +17490,7 @@ var PantsPageTemplate = function PantsPageTemplate(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42,
+      lineNumber: 41,
       columnNumber: 15
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -17496,7 +17498,7 @@ var PantsPageTemplate = function PantsPageTemplate(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44,
+      lineNumber: 43,
       columnNumber: 17
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -17504,15 +17506,25 @@ var PantsPageTemplate = function PantsPageTemplate(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45,
+      lineNumber: 44,
       columnNumber: 19
     }
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    style: {
+      fontSize: "1.5em"
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48,
+      columnNumber: 21
+    }
+  }, main.description))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "tile is-ancestor",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52,
+      lineNumber: 51,
       columnNumber: 17
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -17520,7 +17532,7 @@ var PantsPageTemplate = function PantsPageTemplate(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53,
+      lineNumber: 52,
       columnNumber: 19
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -17528,7 +17540,7 @@ var PantsPageTemplate = function PantsPageTemplate(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54,
+      lineNumber: 53,
       columnNumber: 21
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -17536,23 +17548,31 @@ var PantsPageTemplate = function PantsPageTemplate(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55,
+      lineNumber: 54,
       columnNumber: 23
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("article", {
     className: "tile is-child",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55,
+      columnNumber: 25
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_PreviewCompatibleImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    imageInfo: main.image1,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 56,
-      columnNumber: 25
+      columnNumber: 27
     }
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "tile is-parent",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60,
+      lineNumber: 59,
       columnNumber: 23
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("article", {
@@ -17560,33 +17580,41 @@ var PantsPageTemplate = function PantsPageTemplate(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61,
+      lineNumber: 60,
       columnNumber: 25
     }
-  })))))))))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_PreviewCompatibleImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    imageInfo: main.image2,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61,
+      columnNumber: 27
+    }
+  }))))))))))));
 };
 _c = PantsPageTemplate;
 PantsPageTemplate.propTypes = {
-  image: prop_types__WEBPACK_IMPORTED_MODULE_4___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_4___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string)]),
-  title: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string),
-  heading: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string),
-  description: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string),
-  intro: prop_types__WEBPACK_IMPORTED_MODULE_4___default().shape({
-    blurbs: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().array)
+  image: prop_types__WEBPACK_IMPORTED_MODULE_5___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_5___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_5___default().string)]),
+  title: (prop_types__WEBPACK_IMPORTED_MODULE_5___default().string),
+  heading: (prop_types__WEBPACK_IMPORTED_MODULE_5___default().string),
+  description: (prop_types__WEBPACK_IMPORTED_MODULE_5___default().string),
+  intro: prop_types__WEBPACK_IMPORTED_MODULE_5___default().shape({
+    blurbs: (prop_types__WEBPACK_IMPORTED_MODULE_5___default().array)
   }),
-  main: prop_types__WEBPACK_IMPORTED_MODULE_4___default().shape({
-    heading: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string),
-    description: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string),
-    image1: prop_types__WEBPACK_IMPORTED_MODULE_4___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_4___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string)]),
-    image2: prop_types__WEBPACK_IMPORTED_MODULE_4___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_4___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string)]),
-    image3: prop_types__WEBPACK_IMPORTED_MODULE_4___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_4___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string)])
+  main: prop_types__WEBPACK_IMPORTED_MODULE_5___default().shape({
+    heading: (prop_types__WEBPACK_IMPORTED_MODULE_5___default().string),
+    description: (prop_types__WEBPACK_IMPORTED_MODULE_5___default().string),
+    image1: prop_types__WEBPACK_IMPORTED_MODULE_5___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_5___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_5___default().string)]),
+    image2: prop_types__WEBPACK_IMPORTED_MODULE_5___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_5___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_5___default().string)]),
+    image3: prop_types__WEBPACK_IMPORTED_MODULE_5___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_5___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_5___default().string)])
   }),
-  testimonials: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().array),
-  fullImage: prop_types__WEBPACK_IMPORTED_MODULE_4___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_4___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string)]),
-  pricing: prop_types__WEBPACK_IMPORTED_MODULE_4___default().shape({
-    heading: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string),
-    description: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string),
-    plans: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().array)
+  testimonials: (prop_types__WEBPACK_IMPORTED_MODULE_5___default().array),
+  fullImage: prop_types__WEBPACK_IMPORTED_MODULE_5___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_5___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_5___default().string)]),
+  pricing: prop_types__WEBPACK_IMPORTED_MODULE_5___default().shape({
+    heading: (prop_types__WEBPACK_IMPORTED_MODULE_5___default().string),
+    description: (prop_types__WEBPACK_IMPORTED_MODULE_5___default().string),
+    plans: (prop_types__WEBPACK_IMPORTED_MODULE_5___default().array)
   })
 };
 
@@ -17597,7 +17625,7 @@ var PantsPage = function PantsPage(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127,
+      lineNumber: 126,
       columnNumber: 5
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(PantsPageTemplate, {
@@ -17613,7 +17641,7 @@ var PantsPage = function PantsPage(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 128,
+      lineNumber: 127,
       columnNumber: 7
     }
   }));
@@ -17621,9 +17649,9 @@ var PantsPage = function PantsPage(_ref2) {
 
 _c2 = PantsPage;
 PantsPage.propTypes = {
-  data: prop_types__WEBPACK_IMPORTED_MODULE_4___default().shape({
-    markdownRemark: prop_types__WEBPACK_IMPORTED_MODULE_4___default().shape({
-      frontmatter: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().object)
+  data: prop_types__WEBPACK_IMPORTED_MODULE_5___default().shape({
+    markdownRemark: prop_types__WEBPACK_IMPORTED_MODULE_5___default().shape({
+      frontmatter: (prop_types__WEBPACK_IMPORTED_MODULE_5___default().object)
     })
   })
 };
@@ -49274,7 +49302,7 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
     if(true) {
-      // 1653984369156
+      // 1653984588536
       var cssReload = __webpack_require__(/*! ./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -75884,7 +75912,7 @@ module.exports = [];
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	!function() {
-/******/ 		__webpack_require__.h = function() { return "c6fecb07c9ab92411bd3"; }
+/******/ 		__webpack_require__.h = function() { return "7c3944db2a4900316aff"; }
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
