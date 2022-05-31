@@ -32,12 +32,6 @@ const Navbar = () => {
             to="/"
             className="navbar-item"
             title="Logo"
-            style={{
-              "&:hover, &:focus, &:focus-within, &:is-active": {
-                background: "#0b0605 !important",
-              },
-
-            }}
           >
             <img src={logo} alt="Astronaut Apparel" style={{ width: "28px" }} />
           </Link>
@@ -60,13 +54,16 @@ const Navbar = () => {
           className={`navbar-menu ${navBarActiveClass} ${windowWidth <= 1023 && active ? "is-black" : "is-transparent"}`}
         >
           <div className="navbar-start has-text-centered">
-            <Link className="navbar-item" to="/about">
+          <Link className="navbar-item navbar-tab" to="/">
+              Home
+            </Link>
+            <Link className="navbar-item navbar-tab" to="/surveys">
               Surveys
             </Link>
-            <Link className="navbar-item" to="/products">
+            <Link className="navbar-item navbar-tab" to="/shirts">
               Shirts
             </Link>
-            <Link className="navbar-item" to="/blog">
+            <Link className="navbar-item navbar-tab" to="/pants">
               Pants
             </Link>
             {/* <Link className="navbar-item" to="/blog">
