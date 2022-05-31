@@ -47,7 +47,7 @@ intro:
 main:
   heading: Great coffee with no compromises
   description: >
-    Astronaut Apparel have everything a space traveler could ever want in a wide range of colors. Customize your pants to your exact needs.
+    Astronaut Apparel has everything a space traveler could ever want in a wide range of colors. Customize your pants to your exact needs.
   image1:
     alt: A close-up of a paper filter filled with ground coffee
     image: /img/blog-grid3.jpg
